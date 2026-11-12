@@ -1,0 +1,198 @@
+/* ============================================================
+   JAYGANESH MANOHAR — PROJECTS PAGE STYLES
+   projects.css  |  Used only on projects.html
+   ============================================================ */
+
+/* ─── HERO ─── */
+#projects-hero {
+  min-height: 75vh;
+  padding: 110px 4% 70px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+.projects-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+.projects-hero-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 1rem;
+  display: block;
+}
+.projects-hero-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 1.4rem;
+}
+.projects-hero-title .org { color: var(--orange); }
+.projects-hero-sub {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 460px;
+  margin-bottom: 2rem;
+}
+.projects-hero-stats {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.ph-stat-num {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--orange);
+  display: block;
+  line-height: 1;
+}
+.ph-stat-lbl {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Hero right — image collage */
+.projects-hero-visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 220px 140px;
+  gap: 1rem;
+}
+.ph-img {
+  border-radius: 16px;
+  background: #e8e8e8;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  font-size: 0.8rem;
+  border: 2px solid #fed7a8;
+}
+.ph-img.big { grid-column: 1 / 3; }
+.ph-img img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ─── OUR WORK — clean minimal cards ─── */
+#our-work {
+  padding: 90px 4% 100px;
+  background: var(--bg-beige);
+}
+.work-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 3rem auto 0;
+}
+.work-grid .work-card { flex: 0 0 calc(33.333% - 1rem); }
+.work-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem 1.7rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.work-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}
+.work-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fff5eb;
+  font-size: 1.3rem;
+  margin-bottom: 1.1rem;
+}
+.work-card h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+}
+.work-card p {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+.work-closing {
+  max-width: 780px;
+  margin: 2.5rem auto 0;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+}
+
+/* ─── CTA STRIP ─── */
+#projects-cta {
+  padding: 80px 4%;
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 60%, #f97316 100%);
+  text-align: center;
+}
+.projects-cta-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.projects-cta-sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.88);
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+.projects-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.btn-wh {
+  background: #fff; color: var(--orange);
+  padding: 0.8rem 2rem; border-radius: 10px;
+  font-weight: 700; font-size: 0.9rem;
+  border: none; cursor: pointer; display: inline-block;
+}
+.btn-wh-out {
+  background: transparent; color: #fff;
+  padding: 0.78rem 2rem; border-radius: 10px;
+  font-weight: 700; font-size: 0.9rem;
+  border: 2px solid rgba(255,255,255,0.6);
+  display: inline-block; transition: border-color 0.2s;
+}
+.btn-wh-out:hover { border-color: #fff; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .projects-hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .projects-hero-visual { grid-template-rows: 180px 110px; }
+  .work-grid .work-card { flex-basis: calc(50% - 0.75rem); }
+}
+@media (max-width: 560px) {
+  .work-grid .work-card { flex-basis: 100%; }
+}
+@media (max-width: 600px) {
+  .projects-hero-visual { grid-template-columns: 1fr; grid-template-rows: 200px 140px 140px; }
+  .ph-img.big { grid-column: 1; }
+  .projects-hero-stats { gap: 1.5rem; }
+}
