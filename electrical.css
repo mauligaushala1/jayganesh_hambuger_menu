@@ -1,0 +1,19 @@
+/* electrical.html extras — loaded after signage.css */
+#el-services, #el-process, #el-safety, #el-credentials, #el-clients { scroll-margin-top: 128px; }
+.el-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:1.2rem; margin:0 auto 2.5rem; max-width:1000px; }
+.el-stat { text-align:center; background:var(--bg-beige); border:1px solid #fed7a8; border-radius:var(--radius); padding:1.3rem .8rem; }
+.el-stat strong { display:block; font-family:'Outfit',sans-serif; font-size:1.7rem; font-weight:800; color:var(--orange); }
+.el-stat span { font-size:.82rem; color:var(--text-muted); font-weight:600; }
+.el-process { padding:90px 4%; background:var(--bg-beige); }
+#el-safety { padding:90px 4%; background:var(--bg-dark); }
+#el-safety .section-title { color:#fff; }
+#el-safety .section-desc { color:#9a9a9a; }
+.el-safety-imgs { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; max-width:1100px; margin:0 auto 2rem; }
+.el-safety-imgs img { width:100%; height:200px; object-fit:cover; border-radius:var(--radius-sm); border:1px solid #3a3a3a; }
+.el-safety-list { list-style:none; max-width:820px; margin:0 auto; display:flex; flex-direction:column; gap:.8rem; }
+.el-safety-list li { color:#cfcfcf; line-height:1.7; padding-left:1.6rem; position:relative; font-size:.96rem; }
+.el-safety-list li::before { content:'✓'; position:absolute; left:0; color:var(--orange); font-weight:700; }
+.el-cred { padding:90px 4%; background:#fff; }
+#el-clients { padding:90px 4%; background:var(--bg-light); }
+@media (max-width:900px){ .el-stats{grid-template-columns:repeat(2,1fr);} .el-safety-imgs{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:600px){ .el-process,#el-safety,.el-cred,#el-clients{padding:64px 4%;} .el-safety-imgs img{height:150px;} }
